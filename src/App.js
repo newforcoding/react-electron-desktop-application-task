@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import {Input,Button} from '@material-ui/core'
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+return (
+<div className='container'>
+    <h3 className='head'>TO DO APP</h3>
+      <Input className='input' />  
+       <Button className='btn'>
+          <AddCircleIcon className='btnIcon'/>
+       </Button>
+       {/* <ThemeProvider >
+          <Dark/Light Mode>
+       </ThemeProvider> */}
+
     </div>
-  );
+)
 }
+export default App
 
-export default App;
+
