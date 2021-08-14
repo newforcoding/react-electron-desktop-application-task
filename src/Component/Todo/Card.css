@@ -1,0 +1,10 @@
+.card_wrapper {
+	margin-top: 20px;
+	max-height: 275px;
+	max-width: 275px;
+	margin-left: 20px;
+	padding-top: 10px;
+}
+.card-top {
+	text-align: center;
+}

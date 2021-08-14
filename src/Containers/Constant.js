@@ -1,0 +1,9 @@
+export const ADD_TO_CARD = 'ADD_TO_CARD'
+export const EDIT_TO_CARD = 'EDIT_TO_CARD'
+export const DELELTE_TO_CARD = 'DELELTE_TO_CARD'
+export const UPDATE_TO_CARD = 'UPDATE_TO_CARD'
+
+export const ADD_TO_CARD_SAGA = 'ADD_TO_CARD_SAGA'
+export const DELELTE_TO_CARD_SAGA = 'DELELTE_TO_CARD_SAGA'
+export const EDIT_TO_CARD_SAGA = 'EDIT_TO_CARD_SAGA'
+export const UPDATE_TO_CARD_SAGA = 'UPDATE_TO_CARD_SAGA'

@@ -1,24 +1,14 @@
 import React from 'react'
-import './App.css'
-import {Input,Button} from '@material-ui/core'
-import AddCircleIcon from '@material-ui/icons/AddCircle';
-import { ThemeProvider } from 'styled-components';
+import Index from './Component/Header/Index'
+import CardItem from './Component/Todo/Card'
+
 
 function App(){
 return (
-<div className='container'>
-    <h3 className='head'>TO DO APP</h3>
-      <Input className='input' />  
-       <Button className='btn'>
-          <AddCircleIcon className='btnIcon'/>
-       </Button>
-       {/* <ThemeProvider >
-          <Dark/Light Mode>
-       </ThemeProvider> */}
-
-    </div>
-)
+  <div>
+    <Index/>
+    <CardItem/>
+  </div>
+ )
 }
 export default App
-
-
