@@ -16,10 +16,10 @@ function Index() {
 	fontWeight: 700,
 	lineHeight: 1.2,
 	cursor: 'pointer',
-	color: 'white',
+	color: '#8e2657',
     marginRight: '16px',
     marginLeft:'16px',
-    backgroundColor: 'rgb(0, 0, 0, 0.7)',
+    backgroundColor: '#C490E4',
 	borderColor: 'rgb(0, 0, 0, 0.7)'
     }
     const btnIcon={
@@ -44,6 +44,7 @@ function Index() {
                  onChange={(e)=>setInput(e.target.value)} 
                  value={input}
                 placeholder='Create list here !'
+                
             />  
             <Button className='btn'>
             <AddCircleIcon style={btnIcon} 
@@ -51,8 +52,7 @@ function Index() {
             />
             </Button>
             </div>
-            
-          
+
             <div className='status'>
                 <Button style={style}>All</Button>
                 <Button style={style}>Completed</Button>

@@ -1,6 +1,7 @@
 .container {
 	height: 120px;
-	background-image: linear-gradient(to left, #f5e8c7, #4444);
+	background-image: linear-gradient(to left, #b980f0, #b97a95);
+	/* background-color: #dad0c2; */
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -8,7 +9,7 @@
 .app_name {
 	margin-left: 20px;
 	font-family: "Quicksand", sans-serif;
-	color: rgb(140, 143, 129);
+	color: #8e2657;
 	font-size: 20px;
 	font-weight: 700;
 }

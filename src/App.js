@@ -1,13 +1,13 @@
 import React from 'react'
+import './App.css'
 import Index from './Component/Header/Index'
-import CardItem from './Component/Todo/Card'
-
+import CardList from './Component/Todo/CardList'
 
 function App(){
 return (
-  <div>
+  <div className='app'>
     <Index/>
-    <CardItem/>
+    <CardList/>
   </div>
  )
 }

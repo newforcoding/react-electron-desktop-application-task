@@ -1,55 +1,55 @@
-export const addToCard = (todo)=>{
+export const addToCard = (data)=>{
     return{
         type:'ADD_TO_CARD',
         payload:{
-            todo:todo,
-            id:new Date().getTime().toString()
+            id:new Date().getTime().toString(),
+            data:data
      }
     }
 }
 
-export const EditToCard = (todo)=>{
+export const EditToCard = (data)=>{
     return{
         type:'EDIT_TO_CARD',
-        payload:todo
+        payload:data
     }
 }
-export const deleteToCard = (todo)=>{
+export const deleteToCard = (id)=>{
     return{
         type:'DELETE_TO_CARD',
-        payload:todo
+        id
     }
 }
-export const updateToCard = (todo)=>{
+export const updateToCard = (data)=>{
     return{
         type:'UPDATE_TO_CARD',
-        payload:todo
+        payload:data
     }     
 }
 
-export const addToCardSaga = (todo)=>{
+export const addToCardSaga = (data)=>{
     return{
         type:'ADD_TO_CARD_SAGA',
-        payload:todo
+        payload:data
     }
 }
 
-export const editToCardSaga = (todo)=>{
+export const editToCardSaga = (data)=>{
     return{
         type:'EDIT_TO_CARD_SAGA',
-        payload:todo
+        payload:data
     }
 }
-export const updateToCardSaga = (todo)=>{
+export const updateToCardSaga = (data)=>{
     return{
         type:'UPDATE_TO_CARD_SAGA',
-        payload:todo
+        payload:data
     }
 }
 
-export const deleteToCardSaga = (todo)=>{
+export const deleteToCardSaga = (data)=>{
     return{
         type:'DELETE_TO_CARD_SAGA',
-        payload:todo
+        payload:data
     }
 }

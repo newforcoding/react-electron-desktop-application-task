@@ -1,8 +1,8 @@
 import {put,call,takeLatest,all} from 'redux-saga/effects'
 import {deleteToCardSaga,addToCardSaga,updateToCardSaga} from './Action'
 
-export function* onAddToCardSaga(payload){
-  yield put(addToCardSaga(payload))
+export function* onAddToCardSaga(id,payload){
+  yield put(addToCardSaga(id,payload))
 }
  
 export function* onUpdateToCardSaga(payload){

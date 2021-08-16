@@ -10,8 +10,8 @@ const middlewares = [logger,sagaMiddleware]
 
 //root reducer
 const store = createStore(rootReducer,
-    applyMiddleware(...middlewares),
-    window.__REDUX_DEVTOOLs_EXTENSION__ && window.REDUX_DEVTOOLs_EXTENSION__(),)
+    window.__REDUX_DEVTOOLs_EXTENSION__ && window.REDUX_DEVTOOLs_EXTENSION__(),
+    applyMiddleware(...middlewares))
     
 sagaMiddleware.run(card)
 
