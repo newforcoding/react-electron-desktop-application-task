@@ -12,6 +12,7 @@
 	color: #8e2657;
 	font-size: 20px;
 	font-weight: 700;
+	
 }
 .input_data {
 	width: 50%;
@@ -28,8 +29,23 @@
 	margin-left: 20px;
 	padding-left: 20px;
 }
-.status,
-.mode {
-	margin: 2rem;
-	display: flex;
+.status {
+	border: 1px solid;
+	border-radius: 10px;
+	font-weight: 700;
+	line-height: 1.2;
+	cursor: pointer;
+	color: #8e2657;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+.btnIcon {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	background-color: #271c6c;
+	color: blanchedalmond;
+	border-radius: 50px;
+	border: 2px solid #e1ebfd;
+	box-shadow: 2px 4px 10px #271c6c;
+	font-size: 40px;
 }

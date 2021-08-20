@@ -2,40 +2,23 @@ import React,{useState} from 'react'
 import './Index.css'
 import {Button,Input} from '@material-ui/core'
 import AddCircleIcon from '@material-ui/icons/AddCircle'
-import {addToCard} from '../../Containers/Action'
+import {addToCard,removeToCard} from '../../Containers/Action'
 import {useDispatch} from 'react-redux'
+import DarkModeToggle  from 'react-dark-mode-toggle'
 
 function Index() {
+    
     const [input,setInput] = useState('')
     const dispatch = useDispatch()
-   
-    const style = {
-    padding: '7px 16px',
-	border: '1px solid',
-	borderRadius: '15px',
-	fontWeight: 700,
-	lineHeight: 1.2,
-	cursor: 'pointer',
-	color: '#8e2657',
-    marginRight: '16px',
-    marginLeft:'16px',
-    backgroundColor: '#C490E4',
-	borderColor: 'rgb(0, 0, 0, 0.7)'
-    }
-    const btnIcon={
-    marginLeft: '1rem',
-    marginRight:'1rem',
-	backgroundColor: '#271c6c',
-	color: 'blanchedalmond',
-	borderRadius: 50,
-	border: '2px solid #e1ebfd',
-	boxShadow: '2px 4px 10px #271c6c',
-    fontSize:40
-    }
+    const [mode,setMode] = useState(() => false)
+    
     return (
-        <div className='container'>
+        <div className='container' style={{background:`${mode ? "#F8E2CF" : "#C6B4CE"}`}}>
           <div className='app_name'>
-             <h2>TO DO APP</h2>
+             <h2 style={{color: `${mode ? "#8e2657" : "#3D087B"}`}}>
+
+                 {mode ? "TO DO APP" : "TO DO APP"}
+             </h2>
             </div>
            
             <div className='input_data'>
@@ -47,21 +30,24 @@ function Index() {
                 
             />  
             <Button className='btn'>
-            <AddCircleIcon style={btnIcon} 
+            <AddCircleIcon  style={{color: `${mode ? "#8e2657" : "#3D087B"}`}} 
                            onClick={()=>dispatch(addToCard(input),setInput(''))}
+                           disabled={!input}
             />
             </Button>
             </div>
-
+            
             <div className='status'>
-                <Button style={style}>All</Button>
-                <Button style={style}>Completed</Button>
+                <Button  style={{color: `${mode ? "#8e2657" : "#3D087B"}`}} onClick={()=>dispatch(removeToCard())}>
+                Remove Carts</Button>
             </div>
             
-            <div className='mode'>
-                ☀️
-            </div>
-            
+              <DarkModeToggle
+              onChange={()=>setMode(!mode)} 
+              checked={mode}
+              style={{background:`${mode ? "#8e2657" : "#3D087B"}`}}
+              size={50}/>
+
         </div>
     )
 }

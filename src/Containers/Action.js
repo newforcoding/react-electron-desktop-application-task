@@ -8,25 +8,25 @@ export const addToCard = (data)=>{
     }
 }
 
-export const EditToCard = (data)=>{
+export const removeToCard = ()=>{
     return{
-        type:'EDIT_TO_CARD',
-        payload:data
-    }
+        type:'REMOVE_TO_CARD'
+    }     
 }
+
 export const deleteToCard = (id)=>{
     return{
         type:'DELETE_TO_CARD',
         id
     }
 }
-export const updateToCard = (data)=>{
-    return{
-        type:'UPDATE_TO_CARD',
-        payload:data
-    }     
-}
 
+export const editToCard = (data) =>{
+    return {
+        type:'EDIT_TO_CARD',
+        payload:data
+    }
+}
 export const addToCardSaga = (data)=>{
     return{
         type:'ADD_TO_CARD_SAGA',
@@ -34,18 +34,13 @@ export const addToCardSaga = (data)=>{
     }
 }
 
-export const editToCardSaga = (data)=>{
+
+export const removeToCardSaga = ()=>{
     return{
-        type:'EDIT_TO_CARD_SAGA',
-        payload:data
+        type:'REMOVE_TO_CARD_SAGA'
     }
 }
-export const updateToCardSaga = (data)=>{
-    return{
-        type:'UPDATE_TO_CARD_SAGA',
-        payload:data
-    }
-}
+
 
 export const deleteToCardSaga = (data)=>{
     return{
